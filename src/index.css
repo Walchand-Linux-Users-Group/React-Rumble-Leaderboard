@@ -1,5 +1,13 @@
 body {
+  background: rgb(107, 121, 226);
+  background: linear-gradient(
+    180deg,
+    rgba(107, 121, 226, 1) 1%,
+    rgba(130, 153, 214, 1) 21%,
+    rgba(113, 162, 221, 1) 100%
+  );
   margin: 0;
+  background-repeat: inherit;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +19,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Footer */
