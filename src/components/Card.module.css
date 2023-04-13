@@ -23,6 +23,9 @@
   height: auto;
   width: 25%;
 }
+.techno img {
+  width: 100%;
+}
 .logo {
   height: 70px;
 }
@@ -103,7 +106,8 @@
   transition: 0.3s;
   padding-left: 2px;
 }
-.submitBtn {
+.submitBtn,
+.leaderboardBtn {
   color: #090909;
   padding: 0.7em 1.7em;
   font-size: 18px;
@@ -113,11 +117,30 @@
   transition: all 0.3s;
   box-shadow: 6px 6px 12px #606060;
 }
-
+.leaderboardBtn {
+  border: none;
+  width: 25%;
+  background: #e8e8e8;
+  box-shadow: 6px 6px 12px #000000;
+  background-image: url('https://res.cloudinary.com/dduur8qoo/image/upload/v1681378951/techno_rrafs8.png');
+  background-size: 200%;
+  background-position: 200%;
+  background-repeat: no-repeat;
+  transition: 0.8s ease-in-out;
+  transition-property: background-position, border, color;
+  position: relative;
+  z-index: 1;
+}
 .submitBtn:hover {
   box-shadow: 3px 3px 8px #606060;
 }
 
+.leaderboardBtn:hover {
+  box-shadow: 3px 3px 8px #000000;
+  border: 1px solid #f3db16;
+  color: black;
+  background-position: 40%;
+}
 .submitBtn:active {
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;

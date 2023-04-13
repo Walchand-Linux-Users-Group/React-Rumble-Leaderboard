@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Leaderboard from './components/Leaderboard'
-import Home from './components/Home'
-import Footer from './components/Footer'
 import './components/Footer.css'
 import Header from './components/Header'
 import Card from './components/Card'

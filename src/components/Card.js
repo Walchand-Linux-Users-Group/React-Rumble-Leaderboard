@@ -4,7 +4,7 @@ import { HiFlag } from 'react-icons/hi'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import '../App.css'
-import DockerLink from './DockerLink'
+import TechnoLink from './TechnoLink'
 import wlug from '../Image/meta.png'
 import list from '../Image/pencil-checking-off-golden-todo-260nw-2171134529 (3).png'
 // import list from '../Image/whitelist.png'
@@ -19,7 +19,7 @@ const Card = () => {
   const [status, setStatus] = useState('')
 
   const fetchdata = async (username, ansKey) => {
-    const url = 'https://meta-games.onrender.com/checkans'
+    const url = ''
     const today = new Date()
     const date =
       today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
@@ -36,9 +36,9 @@ const Card = () => {
         setPlaceholder('Final Answer !!')
       }
       alert(
-        'Congratulations! You have collected all fragments of final Flag 🎉 Now ,Submit final Flag which is a specific Combination of all Fragments!Best of Luck 👍'
+        'Congratulations! You have collected all fragments of final Flag! 🎉 Now, Submit final Flag which is a specific combination of all Fragments! Best of Luck 👍'
       )
-      setStatus(`You scored ${res.data.data.marks} Meta 🏆!`)
+      setStatus(`You scored ${res.data.data.marks} Techno Points 🏆!`)
       // console.log(res.status);
     } catch (error) {
       setStatus(error.response.data.error)
@@ -68,7 +68,15 @@ const Card = () => {
   return (
     <>
       <div className={style.containerDiv}>
-        <img src={techno} alt='Word Mark' className={style.techno} />
+        <a
+          href='Guide.pdf'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={style.techno}
+        >
+          <img src={techno} alt='Word Mark' />
+        </a>
+        <TechnoLink />
         <div className={style.mainDiv}>
           <a href='' target='_blank' className={style.logo}>
             <img src={list} />
@@ -78,29 +86,46 @@ const Card = () => {
             <h1>TECHNOTWEET 2K23</h1>
           </div> */}
 
-          <form action='' className={style.form}>
+          <form action='#' className={style.form}>
             <div class={style.container}>
               <label class={style.label}>Techno ID</label>
               <input
                 class={style.input}
-                name='text'
                 type='text'
                 autoComplete='off'
+                placeholder='Your Techno ID'
+                name='user-id'
+                value={metaId}
+                onChange={(e) => setMetdaId(e.target.value)}
+                required
               />
             </div>
             <div class={style.container}>
               <label class={style.label}>Flag</label>
               <input
                 class={style.input}
-                name='text'
                 type='password'
                 autoComplete='off'
+                placeholder='Your password'
+                name='password'
+                value={metaId}
+                onChange={(e) => setMetdaId(e.target.value)}
+                required
               />
             </div>
 
-            <button className={style.submitBtn}>Submit</button>
+            <button className={style.submitBtn} onClick={handleSubmit} id='btn'>
+              Submit
+            </button>
           </form>
+          <div style={{ padding: 10 }}>
+            <p style={{ color: 'black' }}>{status}</p>
+          </div>
         </div>
+
+        <button onClick={handleClick} className={style.leaderboardBtn}>
+          See Leaderboard !
+        </button>
       </div>
     </>
   )
