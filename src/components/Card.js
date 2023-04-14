@@ -72,8 +72,8 @@ const Card = () => {
         </a>
         <TechnoLink />
         <div className={style.mainDiv}>
-          <a href='' target='_blank' className={style.logo}>
-            <img src={list} />
+          <a href='#' target='_blank' className={style.logo} >
+            <img src={list} alt='...'/>
           </a>
           <form action='#' className={style.form}>
             <div class={style.container}>
@@ -106,6 +106,7 @@ const Card = () => {
             <button className={style.submitBtn} onClick={handleSubmit} id='btn'>
               Submit
             </button>
+
           </form>
           <div style={{ padding: 10 }}>
             <p style={{ color: 'black' }}>{status}</p>
