@@ -15,12 +15,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0em 1em 1em 1em;
 }
 
 .techno {
   margin-top: 1rem;
   height: auto;
-  width: 25%;
+  width: 420px;
 }
 .techno img {
   width: 100%;
@@ -109,7 +110,7 @@
 .leaderboardBtn {
   color: #090909;
     width: 40%;
-    padding: 0.7em 1.7em;
+    /* padding: 0.7em 1.7em; */
     /* font-size: 18px; */
     text-align: center;
     border-radius: 0.5em;
@@ -162,10 +163,28 @@
     margin: auto;
   }
   .container{
-    width: 90%;
+    width: 100%;
   }
   .leaderboardBtn{
-    width: 80%;
+    width: 60%;
+    margin: 1.4em auto;
+  }
+  .logo img{
+    top: -65px;
+    width: 100px;
+    position: relative;
+    border-radius: 50%;
+    border: #fff 8px solid;
+    box-shadow: 5px 5px 15px rgb(48, 48, 48), -2px -2px 6px rgba(107, 107, 107, 0.4);
+  }
+  .techno{
+    width: 90%;
     margin: auto;
+  }
+}
+
+@media (width<422px){
+  .mainDiv{
+    width: 90%;
   }
 }
