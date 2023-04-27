@@ -1,10 +1,11 @@
 import React from 'react'
+import style from './Singlecard.module.css'
 const Singlecard = ({ idx, username, marks, time }) => {
   console.log(username, marks)
 
   return (
     <div
-      className='content-card'
+      className={style.contentCard}
       style={{
         display: 'flex',
         justifyContent: 'space-evenly',
@@ -12,7 +13,7 @@ const Singlecard = ({ idx, username, marks, time }) => {
         padding: 7,
       }}
     >
-      <div className='IDX'>
+      <div className={style.idx}>
         {idx === 1 ? (
           <img
             height='50rem'
@@ -35,10 +36,10 @@ const Singlecard = ({ idx, username, marks, time }) => {
           <h4>#{idx}</h4>
         )}
       </div>
-      <div className='UserName'>
+      <div className={style.username}>
         <h4>{username}</h4>
       </div>
-      <div className='User' style={{ display: 'flex' }}>
+      <div className={style.user} style={{ display: 'flex' }}>
         <h4>{marks} </h4>
         <img
           height='30rem'
@@ -47,7 +48,7 @@ const Singlecard = ({ idx, username, marks, time }) => {
           alt='🏆'
         />{' '}
       </div>
-      <div className='User'>
+      <div className={style.user}>
         <h4>{time ? time : 0}</h4>
       </div>
     </div>
