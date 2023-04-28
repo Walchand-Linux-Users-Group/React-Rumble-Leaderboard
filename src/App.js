@@ -6,16 +6,12 @@ import Card from './components/Card'
 
 function App() {
   return (
-
-    <>
     <BrowserRouter>
       <Routes>
-        <Route exact path='/leaderboard' element={<Leaderboard/>}/>
-        <Route exact path='/' element={<Card/>}/>
+        <Route path='/' element={<Card />} />
+        <Route path='/leaderboard' element={<Leaderboard />} />
       </Routes>
     </BrowserRouter>
-      
-    </>
   )
 }
 

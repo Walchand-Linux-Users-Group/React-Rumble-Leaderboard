@@ -1,0 +1,113 @@
+/* .content-leaderboard {
+  z-index: 1;
+  width: 'auto';
+
+  background: #dde1e7;
+  border-radius: 10px;
+
+  box-shadow: rgba(29, 24, 155, 0.3) 2px 8px 8px;
+}
+.content-leaderboard h4 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 0.4rem;
+}
+.login-footer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background: linear-gradient(#28313b, #0b0c0e);
+  border: 2px solid rgb(2, 2, 2);
+  border-radius: 8px;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 3rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1.8rem;
+} */
+
+body {
+  background-color: #f0f0f0;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 3rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: #f0f0f0;
+  box-shadow: 15px 15px 24px #cccccc, -15px -15px 24px #ffffff;
+}
+.card {
+  margin: 1rem 3rem;
+  padding: 3rem;
+  border-radius: 29px;
+  background: #f0f0f0;
+  box-shadow: 15px 15px 24px #cccccc, -15px -15px 24px #ffffff;
+}
+.Singlecard {
+  margin: 1.5rem auto;
+  padding: 0.5rem auto;
+  border-radius: 1rem;
+  background: #f0f0f0;
+  box-shadow: inset 7px 7px 9px #c5c5c5, inset -7px -7px 9px #ffffff;
+}
+.loginFooter {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+  align-items: center;
+  margin: 1rem 3rem;
+  padding: 3rem;
+  border-radius: 29px;
+  background: #f0f0f0;
+  box-shadow: 15px 15px 24px #cccccc, -15px -15px 24px #ffffff;
+}
+.searchBtn {
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
+    5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+.search::after {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+
+.searchInput {
+  border: none;
+  height: 2.9rem;
+  padding: 1rem;
+  width: 20rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  background: #f0f0f0;
+  box-shadow: inset 6px 6px 12px #bdbdbd, inset -6px -6px 12px #ffffff;
+}

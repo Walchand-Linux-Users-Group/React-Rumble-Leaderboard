@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Singlecard from './Singlecard'
 import axios from 'axios'
+import style from './Leaderboard.module.css'
 
 const Leaderboard = () => {
   const [arr, setArr] = useState([])
@@ -26,10 +27,10 @@ const Leaderboard = () => {
       console.log(error.message)
     }
   }
+
   const handleSearch = async (event) => {
     event.preventDefault()
     const username = rankSearch
-
     await fetchRank(username)
   }
 
@@ -52,66 +53,40 @@ const Leaderboard = () => {
     fetchdata()
   }, [])
   let idx = 0
-  return (
-    <div className='main'>
-      <div
-        className='content-leaderboard'
-        style={{
-          display: 'flex',
-          justifyContent: 'space-evenly',
-          alignItems: 'center',
-          padding: 7,
-          marginTop: 20,
-        }}
-      >
-        <h4>TOP LEADERBOARD</h4>
-      </div>
 
-      {arr.map((ele) => {
-        const { username, marks, time } = ele
-        idx++
-        if (idx >= 6) {
-          return
-        }
-        return (
-          <Singlecard idx={idx} username={username} marks={marks} time={time} />
-        )
-      })}
-      <div className='login-footer'>
-        <div
-          style={{
-            marginBottom: '0.5rem',
-            marginLeft: '1rem',
-            marginRight: '1rem',
-          }}
-        >
-          Search Your Rank!!
-        </div>
-        <div
-          id='input-login'
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            marginBottom: '0.5rem',
-            marginTop: '1.3rem',
-            marginLeft: '1rem',
-            marginRight: '0.1rem',
-          }}
-        >
+  return (
+    <div className={style.main}>
+      <div className={style.heading}>
+        <h2>TOP LEADERBOARD</h2>
+      </div>
+      <div className={style.card}>
+        {arr.map((ele) => {
+          const { username, marks, time } = ele
+          idx++
+          if (idx >= 6) {
+            return
+          }
+          return (
+            <div className={style.Singlecard}>
+              <Singlecard
+                idx={idx}
+                username={username}
+                marks={marks}
+                time={time}
+              />
+            </div>
+          )
+        })}
+      </div>
+      <div className={style.loginFooter}>
+        <div style={{ fontWeight: 'bold' }}>Search Your Rank!!</div>
+        <div id='input-login'>
           <input
+            className={style.searchInput}
             type='text'
-            placeholder='Enter Meta Id..'
+            placeholder='Enter Techno ID'
             name='rankSearch'
             value={rankSearch}
-            style={{
-              paddingRight: '1rem',
-              paddingLeft: '0.5rem',
-              paddingTop: '0.2rem',
-              paddingBottom: '0.2rem',
-              border: 'none',
-              outline: 'none',
-              borderRadius: '20px',
-            }}
             onChange={(e) => {
               setrankSearch(e.target.value)
             }}
@@ -119,28 +94,12 @@ const Leaderboard = () => {
           <button
             id='leadbtn'
             onClick={handleSearch}
-            style={{
-              borderRadius: '3rem',
-              width: '4rem',
-              height: '1rem',
-              fontSize: '0.8rem',
-              marginBottom: '0.1rem',
-              marginLeft: '3.8rem',
-              marginRight: '0.6rem',
-              marginTop: '0.4rem',
-            }}
+            className={style.searchBtn}
           >
-            Submit
+            <div className={style.search}>S</div>
           </button>
         </div>
-        <div
-          style={{
-            // marginLeft: '0.4rem',
-            marginBottom: '0.5rem',
-            marginLeft: '0.8rem',
-            marginRight: '0.6rem',
-          }}
-        >
+        <div>
           <p>{rankMsg}</p>
         </div>
       </div>

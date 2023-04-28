@@ -1,14 +1,6 @@
 body {
-
   /* background: rgb(0, 0, 0); */
-  background: linear-gradient(
-    to right,
-    rgb(33, 33, 33),
-    rgb(58, 58, 58) ,
-    rgb(33, 33, 33)
-    /* rgb(58, 58, 58) */
-  );
-  
+
   margin: 0;
   /* background-repeat: no-repeat; */
 

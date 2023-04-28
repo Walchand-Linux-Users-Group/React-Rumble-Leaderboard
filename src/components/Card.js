@@ -5,7 +5,7 @@ import TechnoLink from './TechnoLink'
 import list from '../Image/pencil-checking-off-golden-todo-260nw-2171134529 (3).png'
 import style from './Card.module.css'
 import techno from '../Image/technotweet.png'
-import { NavLink } from 'react-router-dom'
+import Header from './Header'
 
 const Card = () => {
   const [placeholder, setPlaceholder] = useState('Answer fragment')
@@ -62,6 +62,7 @@ const Card = () => {
   }
   return (
     <>
+      <Header />
       <div className={style.containerDiv}>
         <a
           href='Guide.pdf'
@@ -73,8 +74,8 @@ const Card = () => {
         </a>
         <TechnoLink />
         <div className={style.mainDiv}>
-          <a href='#' target='_blank' className={style.logo} >
-            <img src={list} alt='...'/>
+          <a href='#' target='_blank' className={style.logo}>
+            <img src={list} alt='...' />
           </a>
           <form action='#' className={style.form}>
             <div class={style.container}>
@@ -107,7 +108,6 @@ const Card = () => {
             <button className={style.submitBtn} onClick={handleSubmit} id='btn'>
               Submit
             </button>
-
           </form>
           <div style={{ padding: 10 }}>
             <p style={{ color: 'black' }}>{status}</p>
