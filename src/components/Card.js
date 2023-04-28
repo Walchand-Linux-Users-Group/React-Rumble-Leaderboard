@@ -73,11 +73,12 @@ const Card = () => {
         >
           <img src={techno} alt='Word Mark' />
         </a>
-        <TechnoLink />
+        {/* <TechnoLink /> */}
         <div className={style.mainDiv}>
           <a href='#' target='_blank' className={style.logo}>
             <img src={list} alt='...' />
           </a>
+          
           <form action='#' className={style.form}>
             <div class={style.container}>
               <label class={style.label}>Techno ID</label>

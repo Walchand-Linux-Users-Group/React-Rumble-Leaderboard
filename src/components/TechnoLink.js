@@ -19,6 +19,16 @@ const DockerLink = () => {
           <img src={techno} className={`${styles.technoImg}`} />
         </a>
       </div>
+      <div className={styles.imgDiv}>
+        <a href='' target='_blank' rel='noopener noreferrer'>
+          <img src={techno} className={`${styles.technoImg}`} />
+        </a>
+      </div>
+      <div className={styles.imgDiv}>
+        <a href='' target='_blank' rel='noopener noreferrer'>
+          <img src={techno} className={`${styles.technoImg}`} />
+        </a>
+      </div>
     </div>
   )
 }

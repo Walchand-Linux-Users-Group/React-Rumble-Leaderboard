@@ -8,8 +8,12 @@
 .mainDiv {
   border-radius: 38px;
   margin-top: 5rem;
-  background: #f3db16;
-  box-shadow: inset 20px 20px 60px #d3bf13, inset -20px -20px 60px #fff719;
+  /* background: #f3db16;
+  box-shadow: inset 20px 20px 60px #d3bf13, inset -20px -20px 60px #fff719; */
+  border-radius: 22px;
+background: linear-gradient(145deg, #ffffff, #d8d8d8);
+box-shadow:  10px 10px 20px #afafaf,
+             -10px -10px 20px #ffffff;
   width: 420px;
   display: flex;
   flex-direction: column;
@@ -34,7 +38,7 @@
   width: 150px;
   position: relative;
   border-radius: 50%;
-  border: #fff 10px solid;
+  border: #f3db16 10px solid;
   box-shadow: 5px 5px 15px rgb(48, 48, 48),
     -2px -2px 6px rgba(107, 107, 107, 0.4);
 }
@@ -73,7 +77,7 @@
   pointer-events: none;
 }
 
-.input {
+/* .input {
   font-size: 1rem;
   margin: auto;
   width: 100%;
@@ -86,15 +90,27 @@
   background-color: rgb(51, 51, 51);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
     -1px -1px 6px rgba(255, 255, 255, 0.4);
+} */
+input,
+select {
+  background: #ecf0f3;
+  padding: 10px !important;
+  padding-left: 1.1em !important;
+  height: 50px !important;
+  font-size: 14px !important;
+  border-radius: 1em;
+  border: none;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
-.input:focus {
+
+/* .input:focus {
   border: 2px solid transparent;
   color: #fff;
   box-shadow: 1.5px 1.5px 8px rgba(0, 0, 0, 1),
     -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
     inset -1px -1px 6px rgba(255, 255, 255, 0.4);
-}
+} */
 
 .input:focus.input::placeholder {
   transition: 0.3s;
@@ -106,19 +122,23 @@
   transition: 0.3s;
   padding-left: 2px;
 }
+
+
 .submitBtn,
 .leaderboardBtn {
   color: #090909;
     width: 40%;
-    /* padding: 0.7em 1.7em; */
+    padding: 0.7em 1.7em;
     /* font-size: 18px; */
     text-align: center;
     border-radius: 0.5em;
     background: #e8e8e8;
     border: 1px solid #e8e8e8;
     transition: all 0.3s;
+    border: none;
     box-shadow: 6px 6px 12px #606060;
     margin: auto;
+
 }
 
 .submitBtn:hover {
@@ -128,7 +148,12 @@
   border: none;
   width: 380px;
   background: #e8e8e8;
-  box-shadow: 6px 6px 12px #000000;
+  /* box-shadow: 6px 6px 12px #000000; */
+
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff, #d8d8d8);
+  box-shadow:  19px 19px 48px #afafaf,
+               -19px -19px 48px #ffffff;
   background-image: url('https://res.cloudinary.com/dduur8qoo/image/upload/v1681378951/techno_rrafs8.png');
   background-size: 200%;
   background-position: 200%;
@@ -139,6 +164,8 @@
   margin-top: 1em;
   margin-bottom: 1em;
   z-index: 1;
+  height: 3em;
+  margin: 2em auto;
 }
 .leaderboardBtn:hover {
   box-shadow: 3px 3px 8px #000000;
@@ -150,6 +177,9 @@
 .submitBtn:active {
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+.submitBtn{
+  background-color: #f3db16;
 }
 
 /* Responsive */
@@ -174,7 +204,7 @@
     width: 100px;
     position: relative;
     border-radius: 50%;
-    border: #fff 8px solid;
+    border: # 8px solid;
     box-shadow: 5px 5px 15px rgb(48, 48, 48), -2px -2px 6px rgba(107, 107, 107, 0.4);
   }
   .techno{

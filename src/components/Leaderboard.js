@@ -35,14 +35,14 @@ const Leaderboard = () => {
   }
 
   const fetchdata = async () => {
-    const url = 'https://meta-games.onrender.com/leaderboard'
+    const url = 'http://115.247.20.235:54321/users/all'
     try {
       const res = await axios({
         method: 'GET',
         url: url,
       })
       // console.log(res.data.data);
-      setArr(res.data.data)
+      setArr(res)
       // console.log(arr);
     } catch (error) {
       console.log(error)
@@ -60,14 +60,6 @@ const Leaderboard = () => {
         <h2>TOP LEADERBOARD</h2>
       </div>
       <div className={style.card}>
-        <div className={style.SinglecardHeader}>
-          <Singlecard
-            idx='Rank'
-            username='Username'
-            marks='Points'
-            time='Time'
-          />
-        </div>
         {arr.map((ele) => {
           const { username, marks, time } = ele
           idx++
