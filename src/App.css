@@ -274,9 +274,6 @@ body {
   .login-footer {
     width: 20rem;
   }
-  #input-login {
-    width: 8rem;
-  }
 }
 .container {
   display: grid;
@@ -395,10 +392,4 @@ body {
   line-height: 50px;
   color: #595959;
   margin-top: 1rem;
-}
-#leadbtn:hover {
-  box-shadow: 0 0 11px skyblue;
-  background-color: skyblue;
-  color: white;
-  box-shadow: 2px;
 }
