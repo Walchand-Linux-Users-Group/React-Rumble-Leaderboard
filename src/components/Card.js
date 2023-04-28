@@ -6,7 +6,7 @@ import list from '../Image/pencil-checking-off-golden-todo-260nw-2171134529 (3).
 import style from './Card.module.css'
 import techno from '../Image/technotweet.png'
 import Header from './Header'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,NavLink } from 'react-router-dom'
 
 const Card = () => {
   const [placeholder, setPlaceholder] = useState('Answer fragment')
