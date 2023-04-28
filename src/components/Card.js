@@ -5,6 +5,7 @@ import TechnoLink from './TechnoLink'
 import list from '../Image/pencil-checking-off-golden-todo-260nw-2171134529 (3).png'
 import style from './Card.module.css'
 import techno from '../Image/technotweet.png'
+import { NavLink } from 'react-router-dom'
 
 const Card = () => {
   const [placeholder, setPlaceholder] = useState('Answer fragment')
@@ -112,9 +113,9 @@ const Card = () => {
             <p style={{ color: 'black' }}>{status}</p>
           </div>
         </div>
-        <button onClick={handleClick} className={style.leaderboardBtn}>
+        <NavLink to='/leaderboard'><button onClick={handleClick} className={style.leaderboardBtn}>
           See Leaderboard !
-        </button>
+        </button></NavLink>
       </div>
     </>
   )

@@ -135,7 +135,7 @@ const Leaderboard = () => {
         </div>
         <div
           style={{
-            marginLeft: '0.4rem',
+            // marginLeft: '0.4rem',
             marginBottom: '0.5rem',
             marginLeft: '0.8rem',
             marginRight: '0.6rem',
