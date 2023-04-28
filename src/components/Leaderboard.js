@@ -34,14 +34,14 @@ const Leaderboard = () => {
   }
 
   const fetchdata = async () => {
-    const url = 'http://115.247.20.235:54321/users/all'
+    const url = 'https://leaderboard-fetk.onrender.com/all'
     try {
       const res = await axios({
         method: 'GET',
         url: url,
       })
-      // console.log(res.data.data);
-      setArr(res)
+      console.log(res);
+      setArr(res.data)
       // console.log(arr);
     } catch (error) {
       console.log(error)
