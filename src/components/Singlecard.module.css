@@ -1,49 +1,58 @@
-.content-card {
+.contentCard {
   z-index: 1;
   margin-top: 1rem;
   width: auto;
-
-  background: #dde1e7;
   border-radius: 10px;
   padding: 40rem 30rem;
   transition: all 0.5s;
-  box-shadow: -3px -3px 7px #132d8c73, 2px 2px 5px rgba(104, 155, 243, 0.288);
-  /* backdrop-filter: blur(0px); */
-  background-color: rgba(15, 235, 255, 0);
-
-  box-shadow: rgba(29, 24, 155, 0.3) 2px 8px 8px;
-
-  backdrop-filter: blur(7px);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 26px;
-  box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5),
-    inset -12px -12px 16px 0px rgba(145, 192, 255, 0.6),
-    inset 0px 11px 28px 0px rgb(255, 255, 255);
 }
-.content-card:hover {
-  -webkit-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
-  box-shadow: #132d8c73 2px 2px 10px, rgba(104, 155, 243, 0.288) 2px 2px 10px;
-  box-shadow: 35px 35px 68px 0px rgba(63, 140, 239, 0.5),
-    inset -12px -12px 16px 0px rgba(63, 140, 239, 0.6),
-    inset 0px 11px 28px 0px rgb(255, 255, 255);
+.contentCard:hover {
+  -webkit-transform: scale(1.06, 1.06);
+  transform: scale(1.06, 1.06);
 }
 
-.content-card h4 {
-  /* margin-left: 4rem;
-  margin-right: 4rem; */
+.contentCard h4 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.contentCard h3 {
+  margin: 1.7rem auto;
+}
 
-.User {
-  width: 200px;
+.time,
+.marks {
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
-.UserName {
-  width: 20rem;
-  margin-left: 0rem;
-  margin-right: 2rem;
+.search {
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  background: #f6faf1;
+  box-shadow: 8px 8px 10px #d1d5cd, -8px -8px 10px #ffffff;
+}
+.idx {
+  text-align: center;
+}
+.marks {
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+}
+.username {
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  text-align: center;
+}
+.time {
+  width: 25%;
+}
+.points {
+  display: flex;
 }

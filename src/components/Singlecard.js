@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './Singlecard.module.css'
+import tweet from '../Image/Tweet.png'
 const Singlecard = ({ idx, username, marks, time }) => {
   console.log(username, marks)
 
@@ -14,42 +15,34 @@ const Singlecard = ({ idx, username, marks, time }) => {
       }}
     >
       <div className={style.idx}>
-        {idx === 1 ? (
-          <img
-            height='50rem'
-            src='https://res.cloudinary.com/dw4sflimb/image/upload/v1674967446/META2K23/first-place-medal_cntzpn.png'
-            alt='#1'
-          />
-        ) : idx === 2 ? (
-          <img
-            height='50rem'
-            src='https://res.cloudinary.com/dw4sflimb/image/upload/v1674967447/META2K23/second-place-medal_yhisoz.png'
-            alt='#2'
-          />
-        ) : idx === 3 ? (
-          <img
-            height='50rem'
-            src='https://res.cloudinary.com/dw4sflimb/image/upload/v1674967449/META2K23/third-place-medal_nsmnys.png'
-            alt='#3'
-          />
+        {idx === 'Rank' ? (
+          <h3>Rank</h3>
         ) : (
-          <h4>#{idx}</h4>
+          <div className={style.search}>
+            <h4> {idx}</h4>
+          </div>
         )}
       </div>
       <div className={style.username}>
-        <h4>{username}</h4>
+        {username === 'Username' ? <h3>{username}</h3> : <h4>{username}</h4>}
       </div>
-      <div className={style.user} style={{ display: 'flex' }}>
-        <h4>{marks} </h4>
-        <img
-          height='30rem'
-          style={{ marginTop: '1.5rem', marginLeft: '0.5rem' }}
-          src='https://res.cloudinary.com/dw4sflimb/image/upload/v1674966979/META2K23/perspective_matte-92-128x128_mxwjgu.png'
-          alt='🏆'
-        />{' '}
+      <div>
+        {marks === 'Points' ? (
+          <h3>{marks} </h3>
+        ) : (
+          <div className={style.points}>
+            <h4>{marks} </h4>
+            <img
+              height='30rem'
+              style={{ marginTop: '1.5rem', marginLeft: '0.5rem' }}
+              src={tweet}
+              alt='🏆'
+            />
+          </div>
+        )}
       </div>
       <div className={style.user}>
-        <h4>{time ? time : 0}</h4>
+        {time === 'Time' ? <h3>{time}</h3> : <h4>{time ? time : 0}</h4>}
       </div>
     </div>
   )
