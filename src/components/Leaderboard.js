@@ -60,6 +60,14 @@ const Leaderboard = () => {
         <h2>TOP LEADERBOARD</h2>
       </div>
       <div className={style.card}>
+        <div className={style.SinglecardHeader}>
+          <Singlecard
+            idx='Rank'
+            username='Username'
+            marks='Points'
+            time='Time'
+          />
+        </div>
         {arr.map((ele) => {
           const { username, marks, time } = ele
           idx++

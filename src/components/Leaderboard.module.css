@@ -44,9 +44,9 @@ body {
   justify-content: center;
   margin: 1rem 3rem;
   padding: 1rem;
-  border-radius: 20px;
-  background: #f0f0f0;
-  box-shadow: 15px 15px 24px #cccccc, -15px -15px 24px #ffffff;
+  border-radius: 1rem;
+  background: #ffdd00;
+  box-shadow: inset 7px 7px 9px #d9bc00, inset -7px -7px 9px #fffe00;
 }
 .card {
   margin: 1rem 3rem;
@@ -55,12 +55,20 @@ body {
   background: #f0f0f0;
   box-shadow: 15px 15px 24px #cccccc, -15px -15px 24px #ffffff;
 }
+.SinglecardHeader {
+  border-radius: 1rem;
+  background: #f0f0f0;
+  box-shadow: 11px 11px 22px #cccccc, -11px -11px 22px #ffffff;
+}
 .Singlecard {
   margin: 1.5rem auto;
   padding: 0.5rem auto;
   border-radius: 1rem;
   background: #f0f0f0;
   box-shadow: inset 7px 7px 9px #c5c5c5, inset -7px -7px 9px #ffffff;
+  /* border-radius: 1rem;
+  background: #ffdd00;
+  box-shadow: inset 7px 7px 9px #d9bc00, inset -7px -7px 9px #fffe00; */
 }
 .loginFooter {
   display: flex;
