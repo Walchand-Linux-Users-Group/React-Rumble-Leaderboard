@@ -60,7 +60,7 @@ const Leaderboard = () => {
       </div>
       <div className={style.card}>
         {arr.map((ele) => {
-          const { username, marks, time } = ele
+          const { username, score, updatedAt } = ele
           idx++
           if (idx >= 6) {
             return
@@ -70,8 +70,8 @@ const Leaderboard = () => {
               <Singlecard
                 idx={idx}
                 username={username}
-                marks={marks}
-                time={time}
+                marks={score}
+                time={updatedAt.split("T")[1].split(".")[0]}
               />
             </div>
           )

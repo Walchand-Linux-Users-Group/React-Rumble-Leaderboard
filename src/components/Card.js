@@ -15,26 +15,28 @@ const Card = () => {
   const [status, setStatus] = useState('')
   const navigate = useNavigate()
   const fetchdata = async (username, ansKey) => {
-    const url = ''
-    const today = new Date()
-    const date =
-      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
-    const data = { username, ansKey, date }
+    const url = 'https://leaderboard-fetk.onrender.com/save'
+    // const today = new Date()
+    // const date =
+    //   today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
+    const data = { username, ansKey}
     try {
       const res = await axios({
         method: 'POST',
         url: url,
         data,
       })
-
-      console.log(res.data.data.marks)
-      if (res.data.data.marks >= 75) {
-        setPlaceholder('Final Answer !!')
+      console.log(res);
+      alert(res.data.message)
+      console.log(res.data.score)
+      if (res.data.score >= 100) {
+        // setPlaceholder('Final Answer !!')
+        alert(
+          'Congratulations!!! You have collected all the Flags. Check leaderboard for further details 👍'
+        )
       }
-      alert(
-        'Congratulations! You have collected all fragments of final Flag! 🎉 Now, Submit final Flag which is a specific combination of all Fragments! Best of Luck 👍'
-      )
-      setStatus(`You scored ${res.data.data.marks} Techno Points 🏆!`)
+      
+      setStatus(`You scored ${res.data.score} Techno Points 🏆!`)
       // console.log(res.status);
     } catch (error) {
       setStatus(error.response.data.error)
