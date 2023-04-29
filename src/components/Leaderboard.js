@@ -2,24 +2,26 @@ import React, { useEffect, useState } from 'react'
 import Singlecard from './Singlecard'
 import axios from 'axios'
 import style from './Leaderboard.module.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Leaderboard = () => {
   const [arr, setArr] = useState([])
   const [rankMsg, setrankMsg] = useState('')
   const [rankSearch, setrankSearch] = useState('')
   const fetchRank = async (username) => {
-    const url1 = 'https://meta-games.onrender.com/getrank'
+    const url1 = `https://leaderboard-fetk.onrender.com/rank/${username}`
     const data = { username: username }
     console.log(data)
 
     try {
       const res = await axios({
-        method: 'POST',
+        method: 'GET',
         url: url1,
         data,
       })
-      // console.log(res.data.data);
-      setrankMsg(`Your Rank is ${res.data.rank} !🥳`)
-      console.log(res)
+      console.log(res);
+      setrankMsg(`Your Rank is ${res.data} !🥳`)
+      // console.log(res)
       // console.log(arr);
     } catch (error) {
       setrankMsg('User Not Found!')
@@ -62,7 +64,7 @@ const Leaderboard = () => {
         {arr.map((ele) => {
           const { username, score, updatedAt } = ele
           idx++
-          if (idx >= 6) {
+          if (idx > 10) {
             return
           }
           return (

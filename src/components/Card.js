@@ -7,6 +7,8 @@ import style from './Card.module.css'
 import techno from '../Image/technotweet.png'
 import Header from './Header'
 import { useNavigate,NavLink } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Card = () => {
   const [placeholder, setPlaceholder] = useState('Answer fragment')
@@ -27,7 +29,43 @@ const Card = () => {
         data,
       })
       console.log(res);
-      alert(res.data.message)
+      if(res.status === 200){
+        toast.success(res.data.message+' 🥳', {
+          position: "top-center",
+          autoClose: 7000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
+      }
+      else if(res.status === 205){
+        toast.error(res.data.message, {
+          position: "top-center",
+          autoClose: 7000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
+      }
+      else if(res.status === 202 ){
+        toast.warn(res.data.message, {
+          position: "top-center",
+          autoClose: 7000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
+      }
+      // ()
       console.log(res.data.score)
       if (res.data.score >= 100) {
         // setPlaceholder('Final Answer !!')
@@ -65,6 +103,7 @@ const Card = () => {
   }
   return (
     <>
+    <ToastContainer/>
       <Header />
       <div className={style.containerDiv}>
         <a
@@ -124,5 +163,6 @@ const Card = () => {
     </>
   )
 }
+
 
 export default Card
