@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './Header.module.css'
-import logo from '../Image/WLUG_white.png'
+import logo from '../Image/WLUG_Black_Logo.png'
 
 const Header = () => {
   return (
@@ -11,7 +11,5 @@ const Header = () => {
     </>
   )
 }
-
-
 
 export default Header
