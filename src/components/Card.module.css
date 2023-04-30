@@ -139,12 +139,12 @@ select {
 
 .submitBtn:hover {
   box-shadow: 3px 3px 8px #606060;
+  cursor: pointer;
 }
 .leaderboardBtn {
   border: none;
   width: 380px;
   background: #e8e8e8;
-  /* box-shadow: 6px 6px 12px #000000; */
   border-radius: 10px;
   background: linear-gradient(145deg, #ffffff, #d8d8d8);
   box-shadow: 19px 19px 48px #afafaf, -19px -19px 48px #ffffff;
@@ -162,9 +162,10 @@ select {
   margin: 2em auto;
 }
 .leaderboardBtn:hover {
-  box-shadow: 3px 3px 8px #606060;
+  box-shadow: 5px 5px 8px #7d7d7d;
   color: black;
   background-position: 40%;
+  cursor: pointer;
 }
 .submitBtn:active {
   color: #666;
