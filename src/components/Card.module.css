@@ -11,9 +11,8 @@
   /* background: #f3db16;
   box-shadow: inset 20px 20px 60px #d3bf13, inset -20px -20px 60px #fff719; */
   border-radius: 22px;
-background: linear-gradient(145deg, #ffffff, #d8d8d8);
-box-shadow:  10px 10px 20px #afafaf,
-             -10px -10px 20px #ffffff;
+  background: linear-gradient(145deg, #ffffff, #d8d8d8);
+  box-shadow: 10px 10px 20px #afafaf, -10px -10px 20px #ffffff;
   width: 420px;
   display: flex;
   flex-direction: column;
@@ -103,7 +102,6 @@ select {
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
-
 /* .input:focus {
   border: 2px solid transparent;
   color: #fff;
@@ -123,22 +121,20 @@ select {
   padding-left: 2px;
 }
 
-
 .submitBtn,
 .leaderboardBtn {
   color: #090909;
-    width: 40%;
-    padding: 0.7em 1.7em;
-    /* font-size: 18px; */
-    text-align: center;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    border: 1px solid #e8e8e8;
-    transition: all 0.3s;
-    border: none;
-    box-shadow: 6px 6px 12px #606060;
-    margin: auto;
-
+  width: 40%;
+  padding: 0.7em 1.7em;
+  font-weight: 900;
+  text-align: center;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  border: none;
+  box-shadow: 6px 6px 12px #606060;
+  margin: auto;
 }
 
 .submitBtn:hover {
@@ -149,11 +145,9 @@ select {
   width: 380px;
   background: #e8e8e8;
   /* box-shadow: 6px 6px 12px #000000; */
-
   border-radius: 10px;
   background: linear-gradient(145deg, #ffffff, #d8d8d8);
-  box-shadow:  19px 19px 48px #afafaf,
-               -19px -19px 48px #ffffff;
+  box-shadow: 19px 19px 48px #afafaf, -19px -19px 48px #ffffff;
   background-image: url('https://res.cloudinary.com/dduur8qoo/image/upload/v1681378951/techno_rrafs8.png');
   background-size: 200%;
   background-position: 200%;
@@ -168,9 +162,7 @@ select {
   margin: 2em auto;
 }
 .leaderboardBtn:hover {
-  box-shadow: 3px 3px 8px #000000;
-  border: 1px solid #f3db16;
-  font-weight: 900;
+  box-shadow: 3px 3px 8px #606060;
   color: black;
   background-position: 40%;
 }
@@ -178,43 +170,41 @@ select {
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
-.submitBtn{
+.submitBtn {
   background-color: #f3db16;
 }
 
 /* Responsive */
 
-@media (width<600px){
-  .mainDiv{
+@media (width<600px) {
+  .mainDiv {
     width: 70%;
   }
-  .form{
+  .form {
     width: 90%;
     margin: auto;
   }
-  .container{
+  .container {
     width: 100%;
   }
-  .leaderboardBtn{
+  .leaderboardBtn {
     width: 60%;
     margin: 1.4em auto;
   }
-  .logo img{
+  .logo img {
     top: -65px;
     width: 100px;
     position: relative;
     border-radius: 50%;
-    border: # 8px solid;
-    box-shadow: 5px 5px 15px rgb(48, 48, 48), -2px -2px 6px rgba(107, 107, 107, 0.4);
   }
-  .techno{
+  .techno {
     width: 90%;
     margin: auto;
   }
 }
 
-@media (width<422px){
-  .mainDiv{
+@media (width<422px) {
+  .mainDiv {
     width: 90%;
   }
 }
